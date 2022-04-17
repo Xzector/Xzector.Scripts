@@ -1,3 +1,4 @@
+-- credit to shuko for making this, lets xbox users see your chat (autoexe) compatible.
 xbox__commnicaton = function()
     repeat wait() until shared.startup
     task.wait(1.85)
