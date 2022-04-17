@@ -1,8 +1,4 @@
---[[
-Z-Shukos Preformance Stats Check
-Made this because i was bored
---]]
-
+-- credit to Z-Shuko#8287 on discord for making this, lets you view ur preformance stats (autoexe) compatible.
 local stats = function(x)
     shared.iso = math.huge;
     rconsolename('Preformance Tool')
