@@ -1,4 +1,3 @@
--- credit to Z-Shuko#8287 on discord for making this, lets you ride nimbus for free no gamepass. (not autoexe) compatible.
 local key_value;
 game.Players.LocalPlayer.Chatted:connect(function(key)
     if key == ';nimbus' and key_value == nil then
