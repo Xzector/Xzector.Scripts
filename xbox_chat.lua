@@ -1,6 +1,5 @@
--- credit to Z-Shuko#8287 on discord for making this, lets xbox users see your chat (autoexe) compatible.
 xbox__commnicaton = function()
-    repeat wait() until shared.startup
+    repeat wait() until game:IsLoaded()
     task.wait(1.85)
     game.Players.LocalPlayer.CharacterAdded:connect(xbox__commnicaton)
     game.ReplicatedStorage.Xbox:FireServer()
