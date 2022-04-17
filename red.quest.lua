@@ -1,3 +1,5 @@
+-- credit to Z-Shuko#8287 auto easy quest, this lets you do all the easy quest without having to do anything.
+-- this is rather old and can be made 100% better
 if game.PlaceId == 536102540 then
     local lplr = game:GetService('Players').LocalPlayer
     for i,v in pairs(workspace.FriendlyNPCs:GetDescendants()) do
