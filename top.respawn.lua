@@ -1,3 +1,6 @@
+-- this method is better than all the other shit methods. 
+-- note improvements will be made in the future by shuko#8287.
+-- credit to shuko for making this, lets you top respawn with less bugs slightly slower for better preformance, (autoexe) compatible.
 top_respawn = function(char)
     task.wait(5.20)
     char.SuperAction:Destroy();
