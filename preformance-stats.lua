@@ -1,4 +1,3 @@
--- credit to Z-Shuko#8287 on discord for making this, lets you view ur preformance stats (autoexe) compatible.
 local stats = function(x)
     shared.iso = math.huge;
     rconsolename('Preformance Tool')
