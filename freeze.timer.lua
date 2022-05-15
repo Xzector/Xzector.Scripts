@@ -49,10 +49,13 @@ local gui = lplr.PlayerGui;
 local Destroy = destroy;
 local run = sv.stepped;
 
+lplr:WaitForChild('Character')
+
 t.free = function(tax, v)
     local char = lplr.Character;
     local b = gui:FindFirstChild('HUD')
-    if t:ch(char,iso,1) > v and b.Bottom:findFirstChild(tax) and b then
+    if t:ch(char, iso, 1) > v and b.Bottom:findFirstChild(tax) and b and char:FindFirstChild('Action') then
+        char.Action:destroy();
         char.True:destroy();
         return;
     end;
@@ -61,4 +64,5 @@ end;
 add:connect(t.free, fol.loaded, 0);
 run:connect(function()
     t.free(fol.loaded, 0);
+    return
 end);
