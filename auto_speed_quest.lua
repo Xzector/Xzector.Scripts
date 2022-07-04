@@ -63,3 +63,29 @@ function quest_remotes(x,y,z,v)
     lplr.Backpack.ServerTraits.ChatAdvance:FireServer({'k'})
     task.wait(.5)
     quest_remotes('Future Trunks','k','Alright');
+
+    function distance(vect1,vect2)
+        return (vect1 - vect2).Magnitude;
+    end;
+
+    function npc_autofarm(Npc)
+    while task.wait() do
+            for i,v in pairs(game.Workspace.Live:GetChildren()) do
+                if v.Name:lower():find(Npc:lower()) and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health ~= 0 then
+                    step = game:GetService("RunService").Stepped:Connect(function()
+                        local dist = distance(v.HumanoidRootPart.Position, game.Players.LocalPlayer.Character.HumanoidRootPart.Position);
+                        game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(dist/5000),{CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2)}):Play()
+                    end);
+                    repeat task.wait(.33);
+                        game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer({"md"}, "")
+                    until not v:FindFirstChild("HumanoidRootPart") or not v:FindFirstChild("Humanoid") or v.Humanoid.Health == 0;
+                    step:Disconnect();
+                end;
+            end
+            if not game.Players.LocalPlayer.PlayerGui.HUD.FullSize.Quests:FindFirstChild("Copy") then
+                break;
+            end;
+        end
+    end;
+
+    npc_autofarm('Imperfect Cell');
