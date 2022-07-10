@@ -1,3 +1,4 @@
 -- note anyone who steals these methods and calls them theres is a skid.
+-- scripts will be uploaded at some point, others were removed.
 -- all rights reserved to Xzector.
--- date - 3/29/2022.
+-- date - 7/10/2022.
