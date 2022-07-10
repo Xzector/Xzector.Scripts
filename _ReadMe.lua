@@ -1,0 +1,3 @@
+-- note anyone who steals these methods and calls them theres is a skid.
+-- all rights reserved to Xzector.
+-- date - 3/29/2022.
