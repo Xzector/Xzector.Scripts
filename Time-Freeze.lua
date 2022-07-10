@@ -7,7 +7,6 @@ end;
 
 --[[
 credit to, lIShukoIl
-script, double exp freeze
 date by 5/12/2022
 updated.
 --]]
